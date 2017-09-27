@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "stage-0",
+    "env",
+    "flow",
+    "react"
+  ],
+  "plugins": ["transform-class-properties"]
+}

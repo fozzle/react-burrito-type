@@ -1,0 +1,26 @@
+{
+  "name": "burritotyper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/BurritoType.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prepublish": "yarn build"
+  },
+  "author": "Kyle Petrovich",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "flow-bin": "^0.55.0"
+  }
+}
