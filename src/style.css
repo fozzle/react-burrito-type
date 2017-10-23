@@ -1,0 +1,19 @@
+.burrito-fly-enter {
+  transform: scale(1.4, 1.4) translate(0, 8px);
+}
+
+.burrito-fly-enter.burrito-fly-enter-active {
+  transform: scale(1, 1) translate(0, 0);
+  transition: all 300ms ease-in;
+}
+
+.burrito-fly-leave {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.burrito-fly-leave-active {
+  opacity: 0.1;
+  transition: all 300ms ease-in;
+  transform: scale(0.1, 0.1);
+}

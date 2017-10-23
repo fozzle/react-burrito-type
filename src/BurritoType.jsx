@@ -1,6 +1,8 @@
 // @flow
 import * as React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
+import BurritoLetter from './BurritoLetter';
+
 
 type Props = {
   text: string,
@@ -10,13 +12,14 @@ type Props = {
   verticalFreq: number,
   horizontalFreq: number,
   rotationFreq: number,
+  style: mixed,
 };
 
 type State = {
   frame: number,
 };
 
-const FRAME_INCR = 0.08
+const FRAME_INCR = 1/30;
 export default class BurritoType extends React.Component<Props, State> {
   animationFrame: Function;
 
@@ -28,6 +31,7 @@ export default class BurritoType extends React.Component<Props, State> {
     horizontalAmp: 1,
     horizontalFreq: 1/4,
     text: '',
+    style: {},
   };
 
   constructor(props: Props) {
@@ -64,28 +68,26 @@ export default class BurritoType extends React.Component<Props, State> {
       const x = Math.sin(this.state.frame + (i * Math.PI * horizontalFreq)) * horizontalAmp;
       const rot = Math.cos(this.state.frame + (i * Math.PI * rotationFreq)) * rotationAmp;
       return (
-        <span key={i} style={{
-          display: 'inline-block',
-        }}>
-          <span style={{
-            transform: `translate(${x}px, ${y}px) rotateZ(${rot}deg)`,
-            display: 'inline-block',
-          }}>
-            {letter}
-          </span>
-        </span>
+        <BurritoLetter key={i} x={x} y={y} rot={rot}>
+          {letter}
+        </BurritoLetter>
       );
     });
 
+    const containerStyles = Object.assign(
+      {},
+      {
+        whiteSpace: 'pre-wrap',
+        fontFamily: 'Helvetica, sans-serif',
+      },
+      this.props.style
+    );
+
     return (
-      <span style={{ whiteSpace: 'pre-wrap', fontFamily: 'Helvetica, sans-serif' }}>
-        <ReactCSSTransitionGroup
-          transitionName="fly"
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-        >
+      <span style={containerStyles}>
+        <TransitionGroup>
           {letters}
-        </ReactCSSTransitionGroup>
+        </TransitionGroup>
       </span>
     );
   }
