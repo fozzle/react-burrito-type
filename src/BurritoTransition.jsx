@@ -13,7 +13,7 @@ const defaultStyle = {
 
 const transitionStyles = {
   entering: {
-    transform: 'scale(1.4, 1.4) translate(0, 8px)',
+    transform: 'scale(1.4, 1.4) translate(0, 8px)', // TODO: This needs to be based on font size or configurable
   },
   entered: {
     transform: 'scale(1, 1) translate(0, 0)',
