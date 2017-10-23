@@ -38,7 +38,10 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   externals: {
-    'react': 'commonjs react',
+    'react': {
+      commonjs: 'react',
+      commonjs2: 'react',
+    }
   },
   devtool: 'cheap-eval-sourcemap',
   target: 'web',

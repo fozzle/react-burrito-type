@@ -1,8 +1,9 @@
 {
   "name": "react-burrito-type",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Type good letters with this component.",
   "main": "build/index.js",
+  "repository": "https://github.com/fozzle/react-burrito-type",
   "scripts": {
     "build": "webpack --color",
     "dev": "webpack-dev-server --color",
@@ -12,7 +13,6 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
     "react-transition-group": "^2.2.1"
   },
   "devDependencies": {
