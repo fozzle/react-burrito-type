@@ -21,8 +21,8 @@ API
   style: mixed,
 ```
 
-Explanation:
-------------
+Explanation
+-----------
 
 - **text** - the text you want to show burrito style
 - **verticalAmp** - how high on the y-axis the letters will move
