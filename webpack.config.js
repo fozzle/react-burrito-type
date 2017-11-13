@@ -41,9 +41,13 @@ module.exports = {
     'react': {
       commonjs: 'react',
       commonjs2: 'react',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
     }
   },
-  devtool: 'cheap-eval-sourcemap',
+  devtool: process.env.NODE_ENV === 'production' ? false : 'cheap-eval-sourcemap',
   target: 'web',
   devServer: {
     port: 3000,

@@ -1,13 +1,13 @@
 {
   "name": "react-burrito-type",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Type good letters with this component.",
   "main": "build/index.js",
   "repository": "https://github.com/fozzle/react-burrito-type",
   "scripts": {
     "build": "webpack --color",
     "dev": "webpack-dev-server --color",
-    "prepublish": "yarn build"
+    "prepublish": "NODE_ENV=production yarn build"
   },
   "author": "Kyle Petrovich",
   "license": "MIT",
