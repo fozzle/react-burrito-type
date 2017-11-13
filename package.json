@@ -1,6 +1,6 @@
 {
   "name": "react-burrito-type",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Type good letters with this component.",
   "main": "build/index.js",
   "repository": "https://github.com/fozzle/react-burrito-type",
