@@ -21,14 +21,17 @@ API
   style: mixed,
 ```
 
-**text** - the text you want to show burrito style
-**verticalAmp** - how high on the y-axis the letters will move
-**horizontalAmp** - how far on the x-axis the letters will move
-**rotationAmp** - how much the letters will rotate
-**verticalFreq** - frequency of vertical movement
-**horizontalFreq** - frequency of horizontal movement
-**rotationFreq** - frequency of rotational movement
-**style** - any other CSS styles you want to apply to the text go here  
+Explanation:
+------------
+
+- **text** - the text you want to show burrito style
+- **verticalAmp** - how high on the y-axis the letters will move
+- **horizontalAmp** - how far on the x-axis the letters will move
+- **rotationAmp** - how much the letters will rotate
+- **verticalFreq** - frequency of vertical movement
+- **horizontalFreq** - frequency of horizontal movement
+- **rotationFreq** - frequency of rotational movement
+- **style** - any other CSS styles you want to apply to the text go here  
 
 Disclaimer
 ==========
